@@ -1,24 +1,17 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { Main, addMainListeners } from "./components/Main/Main";
+import { addAboutListeners } from "./components/AboutMe/AboutMe";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const render = () => {
+  document.querySelector("#app").innerHTML = `
+    ${Header()}
+    ${Main()}
+    ${Footer()}
+  `;
+};
 
-setupCounter(document.querySelector('#counter'))
+render();
+addAboutListeners();
+addMainListeners();
