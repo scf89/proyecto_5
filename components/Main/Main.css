@@ -19,3 +19,23 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--body);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
